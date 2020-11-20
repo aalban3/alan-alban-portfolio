@@ -47,3 +47,19 @@ const port = process.env.port || 3000;
 app.listen(port,function(){
     console.log("serving app!");
 })
+
+
+// index.ejs //
+
+// <%- include("partials/header") %>
+//  <div class="container">
+//     <% for(let i=0 ; i < 4 ; i++) { %>
+//         <div class="jumbotron">
+//             <h3> <%= company[i]  %> </h3>
+//             <h6> <%= title[i]  %> </h6>
+//             <p> <%= location[i]  %> <span class="fromto"> <%= sdates[i]  %> - <%= edates[i]  %></span></p>
+//             <img src= <%= img[i]  %>> 
+//         </div>
+//     <% } %> 
+// </div>  -
+// <%- include("partials/footer") %>
