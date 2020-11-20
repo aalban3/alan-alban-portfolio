@@ -1,0 +1,93 @@
+html{
+    height: fit-content;
+}
+body {
+    padding-top: 10.0rem;
+  }
+.navbar{
+    height: 10.0rem;
+    border-bottom: 1px solid rgb(168, 168, 168);
+}
+.bg-light {
+    background-color: white !important;
+}
+
+#navbarNav{
+    padding-left: 32%;
+}
+li{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-size: 1.2rem;
+    font-family: Raleway;
+}
+li a:hover{
+    border-bottom: 1px solid black;
+}
+.navbar-brand{
+    font-size: 4rem;
+    padding-left: 3rem;
+    font-family: Raleway;
+    font-weight: 400;
+}
+#footer-nav{
+    border-top: 1px solid rgb(168, 168, 168);
+    font-family: Raleway;
+    font-size: 1.2rem;
+    height: 10rem;
+}
+.row{
+    width: 25%;
+    padding-left:5rem;
+}
+
+/*** Jumbotron ***/
+.container{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.jumbotron{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: 40rem;
+}
+h3{
+    font-family: Raleway;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 1%;
+}
+h6{
+    font-family: Raleway;
+    font-size: 1.2rem;
+    
+    text-align: center;
+    padding-left: 2%;
+    letter-spacing: 1px;
+}
+p{
+    font-family: Raleway;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-left: 11%;
+    letter-spacing: 3px;
+}
+#aa-copy{
+    font-family: Raleway;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-left: 0;
+    letter-spacing: 0;
+}
+.fromto{
+    padding-left: 2.5%;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 150px;
+    width: 50%;
+    border: 1px solid rgb(112, 62, 250);
+}

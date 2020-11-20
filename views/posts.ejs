@@ -1,0 +1,9 @@
+<%- include("partials/header")%>
+<h1>All Posts About dogs</h1>
+<h4>Posts on dogs</h4>
+<% posts.forEach(function(post){ %>
+    <ul>
+        <li> <%= post.title %> <strong> by </strong>  <%= post.author %>  </li>
+    </ul>
+<% }) %>
+<%- include("partials/footer")%>
