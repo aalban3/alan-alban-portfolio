@@ -2,9 +2,9 @@
 <p> This website contains my work history, as well as projects I have worked on </p>
 <h3> Technologies used on the latest version </p>
 <ul>
-<li> Node </li>
-<li> Express </li>
-<li> MongoDB </li>
+    <li> Node </li>
+    <li> Express </li>
+    <li> MongoDB </li>
 </ul>
 <h3> Planning to add React to the stack in the future </h3>
 

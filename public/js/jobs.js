@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/jobs', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('Connected to DB!'))
-.catch(error => console.log(error.message));
+// const mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost:27017/jobs', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// })
+// .then(() => console.log('Connected to DB!'))
+// .catch(error => console.log(error.message));
 
 // let newSchema = new mongoose.Schema({
 //     company: String,
@@ -63,23 +63,23 @@ mongoose.connect('mongodb://localhost:27017/jobs', {
 //     })
 
 // update function
-const Schema = mongoose.Schema;
-const jobSchema = new Schema({}, { strict: false });
-const Job = mongoose.model('Job', jobSchema, 'jobs');
-jobSchema.method.greet = function(){
-  console.log("Job schema!!!");
-}
+// const Schema = mongoose.Schema;
+// const jobSchema = new Schema({}, { strict: false });
+// const Job = mongoose.model('Job', jobSchema, 'jobs');
+// jobSchema.method.greet = function(){
+//   console.log("Job schema!!!");
+// }
 
-const update = Job.updateOne(
-  {company:'IBM'},
-  {image: 'https://drive.google.com/uc?export=view&id=1VWqfveFS_fkLBhIVu0e1jc_uJ_wyso-X'})
-  .then(data => {
-    console.log(data.toString(data.image))
-    return data
-})
-  .catch(err => {
-      console.log("Error retrieving query", err);
-  })
+// const update = Job.updateOne(
+//   {company:'IBM'},
+//   {image: 'https://drive.google.com/uc?export=view&id=1VWqfveFS_fkLBhIVu0e1jc_uJ_wyso-X'})
+//   .then(data => {
+//     console.log(data.toString(data.image))
+//     return data
+// })
+//   .catch(err => {
+//       console.log("Error retrieving query", err);
+//   })
 
 // MOngoose virtuals
 // this example creates a virtual function to retrieve a full name
