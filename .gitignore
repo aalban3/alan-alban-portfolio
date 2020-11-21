@@ -40,7 +40,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-public/js/jobs.js
+public/js/makejobs.js
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
