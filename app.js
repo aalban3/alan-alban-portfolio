@@ -1,40 +1,40 @@
-//const jobs = require('./public/js/findjobs')
+const jobs = require('./public/js/findjobs')
 let express = require("express");
 let app = express()
 app.use(express.static("public")); // this tells express to serve our public directory for us 
 app.use(express.static("lib"));
 app.use(express.static("images"));
 app.set("view engine","ejs") // when you use this, you don't need to use .ejs after every view file render
-//const conn = new jobs.Jobs();
+const conn = new jobs.Jobs();
 app.get(["/","/home"],function(req,res){
-    // let jobList = []; 
+    let jobList = []; 
     
-    // const allJobs = conn.queryDB()
-    //     .then(data => {
-    //         let company = [];
-    //         let title = [];
-    //         let location = [];
+    const allJobs = conn.queryDB()
+        .then(data => {
+            let company = [];
+            let title = [];
+            let location = [];
 
 
-    //         let sdates = [];
-    //         let edates = [];
-    //         let image = [];
-    //         let desc = [];
-    //         data.forEach( (job) => {
-    //             company.push(job.company);
-    //             image.push(job.image);
-    //             location.push(job.location);
-    //             title.push(job.title);
-    //             sdates.push(job.sdate);
-    //             edates.push(job.edate);
-    //         })
-    //         res.render("index", {company: company, img: image,location: location, title: title, sdates: sdates, edates: edates})
-    //     })
-    //     .catch(err => {
-    //         console.log("Error retrireving values")
-    //         console.log(err);
-    //     })
-    res.render("index") // render needs an ejs file. Put it in the views folder (no need to reference views here)
+            let sdates = [];
+            let edates = [];
+            let image = [];
+            let desc = [];
+            data.forEach( (job) => {
+                company.push(job.company);
+                image.push(job.image);
+                location.push(job.location);
+                title.push(job.title);
+                sdates.push(job.sdate);
+                edates.push(job.edate);
+            })
+            res.render("index", {company: company, img: image,location: location, title: title, sdates: sdates, edates: edates})
+        })
+        .catch(err => {
+            console.log("Error retrireving values")
+            console.log(err);
+        })
+    //res.render("index") // render needs an ejs file. Put it in the views folder (no need to reference views here)
 })
 
 app.get("/projects", function(req, res){
@@ -51,15 +51,3 @@ app.listen(port,function(){
 
 // index.ejs //
 
-// <%- include("partials/header") %>
-//  <div class="container">
-//     <% for(let i=0 ; i < 4 ; i++) { %>
-//         <div class="jumbotron">
-//             <h3> <%= company[i]  %> </h3>
-//             <h6> <%= title[i]  %> </h6>
-//             <p> <%= location[i]  %> <span class="fromto"> <%= sdates[i]  %> - <%= edates[i]  %></span></p>
-//             <img src= <%= img[i]  %>> 
-//         </div>
-//     <% } %> 
-// </div>  -
-// <%- include("partials/footer") %>
