@@ -1,0 +1,151 @@
+html{
+    height: fit-content;
+}
+body {
+    padding-top: 5.0rem;
+  }
+
+/***** TOP NAV-BAR *****/
+.navbar{
+    /* height: 10.0rem; */
+    border-bottom: 1px solid rgb(168, 168, 168);
+}
+.bg-light {
+    background-color: white !important;
+}
+.navbar-collapse{
+    padding-left: 0;
+}
+
+#options{
+    list-style-position: inside;
+    padding-left: 12rem;
+}
+#options li{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+    font-family: Raleway;
+}
+li a:hover{
+    border-bottom: 0.002rem solid black;
+}
+.navbar-brand{
+    font-size: 4rem;
+    padding-left: 3rem;
+    font-family: Raleway;
+    font-weight: 400;
+}
+#header-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    width: 50%;
+    height: 50%;
+    margin: 0 0 0 10%;
+    padding-left: 30%;
+}
+
+
+/*** Jumbotron ***/
+.container{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.jumbotron{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: 45rem;
+
+}
+.header-company{
+    font-family: Raleway;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 1%;
+}
+h6{
+    font-family: Raleway;
+    font-size: 1.2rem;
+    
+    text-align: center;
+    padding-left: 2%;
+    letter-spacing: 1px;
+}
+.job-location{
+    font-family: Raleway;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-left: 9%;
+    letter-spacing: 0.1rem;
+}
+
+.fromto{
+    padding-left: 2.5%;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 150px;
+    width: 50%;
+    border: 1px solid rgb(112, 62, 250);
+}
+
+.desc-items {
+    width: 50rem;
+    padding-top: 4rem;
+    text-overflow: ellipsis;
+}
+
+.job-desc{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    
+}
+/***** F O O T E R  *****/
+
+#footer-nav{
+    border-top: 1px solid rgb(168, 168, 168);
+    font-family: Raleway;
+    font-size: 1.2rem;
+    height: 10rem;
+}
+#aa-copy{
+    font-family: Raleway;
+    font-size: 1.2rem;
+    text-align: left;
+    letter-spacing: 0;
+    padding-left: 1rem;
+    margin-left: 1rem;
+}
+
+.row {
+    max-width: 50%;
+    min-width: 5rem;
+    width: 60%;
+    padding-left: 1rem;
+    margin-left: 1rem;
+}
+#social {
+    width: 10rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    width: 30%;
+    height: 50%;
+    height: 8rem;
+    margin: 0;
+}
+
+.social-flex {
+    margin-top: 2rem;
+    width: 4rem;
+    height: 4rem;
+}

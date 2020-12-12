@@ -1,5 +1,83 @@
 <%- include("partials/header") %>
-<div class="container">
-    <h1>Nothing to see yet!</h1>
-</div>
+
+<section id="projects-container-2">
+    <div class="proj-div">
+        <img class ="project-img" src="https://drive.google.com/uc?export=view&id=1wdiG7cbzrvztxdQblYj53URcA1dldNRk" alt="">
+        <div class="overlay">
+            <div class="text">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#educacion-modal">
+                    See More
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="proj-div">
+        <img class ="project-img" src="https://attendify.com/blog//wp-content/uploads/2018/02/sentiment-analysis.gif" alt="">
+        <div class="overlay">
+            <div class="text">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tesseractModal">
+                    See More
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
 <%- include("partials/footer") %>
+<!-- Button trigger modal -->
+  
+<!-- Modal: Educacion-->
+<div class="modal fade" id="educacion-modal" tabindex="-1" role="dialog" aria-labelledby="educacionLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="educacionLabel">Revista Educacion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>
+            A project I began to create a digital disrtribution of my father's magazine.
+            Since the magazine's foundation in 2004, we have never had a website for it. This year I set out to
+            create its first web version. The website continues to improve as I test out new features and enhancements.
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a type="button" class="btn btn-primary" href= "http://revista-educacion.com" target="_blank">Visit Site</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- Modal: Tesseract-->
+<div class="modal fade" id="tesseractModal" tabindex="-1" role="dialog" aria-labelledby="tesseractLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="tesseractLabel">Tesseract.AI</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>
+                I built a Sentiment API using Django Rest Framework and React.
+                This API is consumed using Axios in my React App.
+                The GUI shows analytics on multiple cards. (The project image is just one I found on Google. I think it looks fun.)
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a type="button" class="btn btn-primary" href= "http://tesseractai.com" target="_blank">Visit Site</a>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+<!-- <h2>Tesseract.AI</h2>
+<p> 
+    I built a Sentiment API using Django Rest Framework.
+    This API is consumed by an Express.JS application that
+    displays the response in a front end UI. The latest Tesseract code can be found on my github page. 
+</p> -->

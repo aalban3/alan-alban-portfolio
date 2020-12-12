@@ -1,3 +1,4 @@
+const path = require('path');
 const jobs = require('./public/js/findjobs')
 let express = require("express");
 let app = express()
@@ -14,8 +15,6 @@ app.get(["/","/home"],function(req,res){
             let company = [];
             let title = [];
             let location = [];
-
-
             let sdates = [];
             let edates = [];
             let image = [];
@@ -27,8 +26,11 @@ app.get(["/","/home"],function(req,res){
                 title.push(job.title);
                 sdates.push(job.sdate);
                 edates.push(job.edate);
+                desc.push(job.description);
             })
-            res.render("index", {company: company, img: image,location: location, title: title, sdates: sdates, edates: edates})
+
+            console.log(desc[1]);
+            res.render("index", {company: company, img: image,location: location, title: title, sdates: sdates, edates: edates,desc:desc})
         })
         .catch(err => {
             console.log("Error retrireving values")
@@ -40,10 +42,17 @@ app.get(["/","/home"],function(req,res){
 app.get("/projects", function(req, res){
     res.render("projects");
 })
+// app.get("/updatedb",function(req, res){
+//     const updates = conn.updateDB('')
+//         .then(date => {
+            
+//         })
+//     res.render("/");
+// })
 app.get("/skills", function(req, res){
     res.render("skills");
 })
-const port = process.env.port || 3000;
+const port = process.env.port || 4000;
 app.listen(port,function(){
     console.log("serving app!");
 })

@@ -2,10 +2,17 @@
  <div class="container">
     <% for(let i=0 ; i < 4 ; i++) { %>
         <div class="jumbotron">
-            <h3> <%= company[i]  %> </h3>
+            <h3 class="header-company"> <%= company[i]  %> </h3>
             <h6> <%= title[i]  %> </h6>
-            <p> <%= location[i]  %> <span class="fromto"> <%= sdates[i]  %> - <%= edates[i]  %></span></p>
+            <p class= "job-location"> <%= location[i]  %> <span class="fromto"> <%= sdates[i]  %> - <%= edates[i]  %></span></p>
             <img src= <%= img[i]  %>> 
+            <div class="container desc-items">
+                <ul>
+                    <% desc[i].forEach( async (el) => { %>
+                        <li class="job-desc"> <%= el %></li>
+                    <% }) %> 
+                </ul>
+            </div>
         </div>
     <% } %> 
 </div> 

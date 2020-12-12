@@ -1,7 +1,8 @@
 class Jobs {
     constructor(){
         const mongoose = require('mongoose');
-        mongoose.connect(process.env.url, {
+        const def = process.env.url
+        mongoose.connect(def, {
             useNewUrlParser: true,
             useUnifiedTopology: true
           })
@@ -26,9 +27,9 @@ class Jobs {
 
         return retVal
     }
-    async updateDB(description){
+    async updateDB(company, description){
         const update = await this.Job.updateOne(
-            {company:'FACTSET'},
+            {company:company},
             {decription: [
                 description
             ]})

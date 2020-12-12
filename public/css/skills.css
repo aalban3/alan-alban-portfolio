@@ -1,0 +1,15 @@
+h3 {
+    text-align: left;
+}
+
+#skills-container{
+    width: 40rem;
+}
+
+.skill-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    display: inline-block;
+    border: none;
+    /* Other styles here */
+}
