@@ -6,5 +6,4 @@
     <li> Express </li>
     <li> MongoDB </li>
 </ul>
-<h3> Planning to add React to the stack in the future </h3>
 
