@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config();
 const path = require('path');
 const jobs = require('./public/js/findjobs')
 let express = require("express");
@@ -52,7 +53,7 @@ app.get("/projects", function(req, res){
 app.get("/skills", function(req, res){
     res.render("skills");
 })
-const port = process.env.port || 4000;
+const port = process.env.port;
 app.listen(port,function(){
     console.log("serving app!");
 })
