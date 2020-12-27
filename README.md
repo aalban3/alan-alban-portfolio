@@ -13,6 +13,6 @@ I deployed my app on AWS since it's what I have used in the pasdt and feel the m
     * Creating the Node App I needed
     * Setting up the load balanxcers in my region
     * Easy creation of environment variablesd to protect my MongoDB credentials
-* **CodePipeline** - Setup my CI/Cd for production. It takes the code form my github repository and updates it in AWS every time I make a commit. EB is takes the code and updates the server with it. I go staight to PROD since I'm currently using my local environment for the BUILD stage. 
+* **CodePipeline** - This sets up my CI/CD for production. It takes the code form my github repository and updates it in AWS every time I make a commit. EB is takes the code and updates the server with it. I go staight to PROD since I'm currently using my local environment for the BUILD stage. 
 
 
