@@ -31,17 +31,16 @@ app.get(["/","/home"],function(req,res){
             })
 
             console.log(desc[1]);
-            res.render("index", {company: company, img: image,location: location, title: title, sdates: sdates, edates: edates,desc:desc})
+            res.render("index", {company: company, img: image,location: location, title: title, sdates: sdates, edates: edates,desc:desc,page_name:"index"})
         })
         .catch(err => {
             console.log("Error retrireving values")
             console.log(err);
         })
-    //res.render("index") // render needs an ejs file. Put it in the views folder (no need to reference views here)
 })
 
 app.get("/projects", function(req, res){
-    res.render("projects");
+    res.render("projects",{page_name:"projects"});
 })
 // app.get("/updatedb",function(req, res){
 //     const updates = conn.updateDB('')
@@ -51,7 +50,7 @@ app.get("/projects", function(req, res){
 //     res.render("/");
 // })
 app.get("/skills", function(req, res){
-    res.render("skills");
+    res.render("skills",{page_name:"skills"});
 })
 const port = process.env.port;
 app.listen(port,function(){
