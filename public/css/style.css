@@ -35,6 +35,7 @@ li a:hover{
     padding-left: 3rem;
     font-family: Raleway;
     font-weight: 400;
+    text-shadow: 1.5px 3px 2px rgba(0,0,0,0.3);
 }
 #header-container {
     display: flex;

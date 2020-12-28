@@ -1,9 +1,18 @@
-h3 {
+#skills-container h3 {
     text-align: left;
 }
 
 #skills-container{
-    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50rem;
+    height: 60rem;
+}
+
+#skills-container .container {
+    border-radius: 10px;
+    box-shadow: 0 10px 38px rgba(0, 0, 0, 0.3), 0 10px 12px rgba(0, 0, 0, 0.1);
 }
 
 .skill-icon {
@@ -12,4 +21,16 @@ h3 {
     display: inline-block;
     border: none;
     /* Other styles here */
+}
+
+.skill-title {
+    text-align: center;
+    font-family: Raleway;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+/***** ARTICLES *****/
+
+.skills-articles .skill-title {
+    padding-bottom: 7rem;
 }
