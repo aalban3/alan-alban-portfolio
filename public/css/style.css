@@ -46,17 +46,17 @@ li a:hover{
     padding-left: 30%;
 }
 
-
-/*** Jumbotron ***/
+/*****************/
+/*** JUMBOTRON ***/
+/*****************/
 .container{
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
 .jumbotron{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     height: 45rem;
-
 }
 .header-company{
     font-family: Raleway;
@@ -94,15 +94,21 @@ img{
 }
 
 .desc-items {
-    width: 50rem;
+    display:flex;
+    flex-direction: column;
+    width: 40rem;
     padding-top: 4rem;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
+}
+.desc-items ul {
+    height: 15rem;
 }
 
 .job-desc{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    
+    overflow-inline: scroll;
+    float: left;
 }
 /***** F O O T E R  *****/
 
