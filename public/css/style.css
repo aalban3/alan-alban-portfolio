@@ -4,8 +4,9 @@ html{
 body {
     padding-top: 5.0rem;
   }
-
+/***********************/
 /***** TOP NAV-BAR *****/
+/***********************/
 .navbar{
     /* height: 10.0rem; */
     border-bottom: 1px solid rgb(168, 168, 168);
@@ -27,15 +28,40 @@ body {
     font-size: 1.2rem;
     font-family: Raleway;
 }
-li a:hover{
-    border-bottom: 0.002rem solid black;
+
+/* underline animation */
+/***********************/
+li a {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
 }
+li a:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+li a:hover:after {
+	width: 100%;
+	background: #3a3a3a;
+}
+
+/***********************/
+/***********************/
+
+/* li a:hover{
+    border-bottom: 0.002rem solid black;
+} */
 .navbar-brand{
     font-size: 4rem;
     padding-left: 3rem;
     font-family: Raleway;
     font-weight: 400;
-    text-shadow: 1.5px 3px 2px rgba(0,0,0,0.3);
+    text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
 }
 #header-container {
     display: flex;
