@@ -1,181 +1,31 @@
-html{
-    height: fit-content;
+.home-container {
+  position: relative;
 }
-body {
-    padding-top: 5.0rem;
-  }
-/***********************/
-/***** TOP NAV-BAR *****/
-/***********************/
-.navbar{
-    /* height: 10.0rem; */
-    border-bottom: 1px solid rgb(168, 168, 168);
+.particles {
+  width: 100%;
+  height: 100vh;
 }
-.bg-light {
-    background-color: white !important;
+.home-title {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
-.navbar-collapse{
-    padding-left: 0;
+.home-title button {
+  margin-top: 3rem;
 }
-
-#options{
-    list-style-position: inside;
-    padding-left: 12rem;
+.home-title h1 {
+  font-size: 5rem;
+  color: aliceblue;
 }
-#options li{
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 1.2rem;
-    font-family: Raleway;
+.home-title a {
+  color: aliceblue;
+  text-decoration: none;
 }
-
-/* underline animation */
-/***********************/
-li a {
-	display: inline-block;
-	position: relative;
-	padding-bottom: 3px;
-}
-li a:after {
-	content: '';
-	display: block;
-	margin: auto;
-	height: 3px;
-	width: 0px;
-	background: transparent;
-	transition: width .5s ease, background-color .5s ease;
-}
-li a:hover:after {
-	width: 100%;
-	background: #3a3a3a;
-}
-
-/***********************/
-/***********************/
-
-.navbar-brand{
-    font-size: 4rem;
-    padding-left: 3rem;
-    font-family: Raleway;
-    font-weight: 400;
-    text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
-}
-#header-container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: right;
-    width: 50%;
-    height: 50%;
-    margin: 0 0 0 10%;
-    padding-left: 30%;
-}
-
-/*****************/
-/*** JUMBOTRON ***/
-/*****************/
-.container{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-}
-.jumbotron{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    height: 45rem;
-}
-.header-company{
-    font-family: Raleway;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-align: center;
-    padding-left: 1%;
-}
-h6{
-    font-family: Raleway;
-    font-size: 1.2rem;
-    
-    text-align: center;
-    padding-left: 2%;
-    letter-spacing: 1px;
-}
-.job-location{
-    font-family: Raleway;
-    font-size: 1.2rem;
-    text-align: center;
-    padding-left: 9%;
-    letter-spacing: 0.1rem;
-}
-
-.fromto{
-    padding-left: 2.5%;
-}
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 150px;
-    width: 50%;
-    border: 1px solid rgb(112, 62, 250);
-}
-
-.desc-items {
-    display:flex;
-    flex-direction: column;
-    width: 40rem;
-    padding-top: 4rem;
-    /* text-overflow: ellipsis; */
-}
-.desc-items ul {
-    height: 15rem;
-}
-
-.job-desc{
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    overflow-inline: scroll;
-    float: left;
-}
-/***** F O O T E R  *****/
-
-#footer-nav{
-    border-top: 1px solid rgb(168, 168, 168);
-    font-family: Raleway;
-    font-size: 1.2rem;
-    height: 10rem;
-}
-#aa-copy{
-    font-family: Raleway;
-    font-size: 1.2rem;
-    text-align: left;
-    letter-spacing: 0;
-    padding-left: 1rem;
-    margin-left: 1rem;
-}
-
-.row {
-    max-width: 50%;
-    min-width: 5rem;
-    width: 60%;
-    padding-left: 1rem;
-    margin-left: 1rem;
-}
-#social {
-    width: 10rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-#container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: right;
-    width: 30%;
-    height: 50%;
-    height: 8rem;
-    margin: 0;
-}
-
-.social-flex {
-    margin-top: 2rem;
-    width: 4rem;
-    height: 4rem;
+.home-title a:hover {
+  color: rgb(195, 195, 195);
 }
