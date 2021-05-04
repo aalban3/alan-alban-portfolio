@@ -235,3 +235,6 @@ dist
 
 # workspace
 *.code-workspace
+public/bundle.js
+public/bundle.js.map
+.DS_Store
