@@ -1,4 +1,4 @@
-const options: any = {
+const options = {
   background: {
     color: {
       value: "#000024",

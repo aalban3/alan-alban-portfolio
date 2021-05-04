@@ -1,23 +1,27 @@
-const path = require("path");
 module.exports = {
-  entry: path.join(__dirname, "client", "index.tsx"),
+  entry: ["./client/index.jsx"],
+  output: {
+    path: __dirname,
+    filename: "./public/bundle.js",
+  },
+  devtool: "source-map",
+  resolve: {
+    extensions: [".js", ".jsx"],
+  },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: {
-          loader: "ts-loader",
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+        options: {
+          presets: ["@babel/preset-react"],
         },
-        include: [path.resolve(__dirname, "client")],
-        exclude: [path.resolve(__dirname, "node_modules")],
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
     ],
-  },
-  resolve: {
-    extensions: [".tsx", ".ts", ".js"],
-  },
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "public"),
   },
 };

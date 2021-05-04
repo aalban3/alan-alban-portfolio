@@ -1,13 +1,13 @@
-import express, { json } from "express";
-import path from "path";
-import logger from "morgan";
-import dotenv from "dotenv";
+const express = require("express");
+const path = require("path");
+const logger = require("morgan");
+const dotenv = require("dotenv");
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(logger("dev"));
-app.use(json());
+app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "public")));
 
 app.get("/", (req, res) =>

@@ -1,11 +1,11 @@
 import React from "react";
-import Particles from "react-tsparticles";
+import Particles from "react-particles-js";
 import options from "../particle-options";
 
 const Background = () => {
   return (
     <div className="particles">
-      <Particles id="tsparticles" options={options} />
+      <Particles id="tsparticles" params={options} />
     </div>
   );
 };
