@@ -234,7 +234,8 @@ dist
 .pnp.*
 
 # workspace
-*.code-workspace
+.code-workspace
 public/bundle.js
 public/bundle.js.map
 .DS_Store
+.LICENCE.text

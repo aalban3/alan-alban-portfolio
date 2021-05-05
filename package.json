@@ -8,10 +8,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server",
-    "build": "webpack",
+    "build": "webpack --mode=production",
     "build:dev": "npm run build -- --watch --mode=development",
-    "start:dev": "npm run build:dev & npm run start"
+    "start:dev": "npm run build:dev & nodemon server",
+    "start": "npm run build & node server"
   },
   "author": "Alan Alban",
   "license": "ISC",
