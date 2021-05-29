@@ -14,7 +14,7 @@ import pythonIcon from "@iconify-icons/logos/python";
 const Skills = () => {
   return (
     <div className="skills">
-      <h2> Skills & Technologies</h2>
+      <h1> SKILLS & TECHNOLOGIES</h1>
       <div id="tech-icons">
         <section>
           <Icon icon={javascriptIcon} width="80" />

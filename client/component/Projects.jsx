@@ -46,11 +46,21 @@ export default function Projects() {
           <div className="description-text">
             <h2>Jade Finance</h2>
             <section>
-              <p>Grace hopper Motors p1</p>
-              <p>Grace hopper Motors p2</p>
+              <p>
+                A personal financial application that lets you connect with
+                friends and keep each other accountable. Jade uses the Plaid API
+                to pull bank account information and summarizes it in your
+                account.
+              </p>
+              <p>
+                I worked in a team of four. I implement Login/Signup, Tab
+                navigation component, the account stack. Plaid integration,
+                including the GraphQL back-end. I also implemented edit and
+                delete budgets.
+              </p>
               <p className="tech-used">
-                <span>Technologies used:</span> React JS, Redux, Express,
-                PostgreSQL, Sequelize
+                <span>Technologies used:</span> React Native, GraphQL, Apollo,
+                Victory JS, Express, PostgreSQL, Sequelize
               </p>
             </section>
           </div>

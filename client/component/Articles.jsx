@@ -1,12 +1,11 @@
 import React from "react";
-// npm install --save-dev @iconify/react @iconify-icons/logos
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import mediumIcon from "@iconify-icons/logos/medium";
 
 export default function Articles() {
   return (
     <div id="articles">
-      <h2 className="skill-title">Articles</h2>
+      <h1 className="article-title">ARTICLES</h1>
       <div className="card">
         <img
           className="card-img-top"
@@ -23,6 +22,8 @@ export default function Articles() {
         <div className="card-body footer">
           <a
             href="https://alan-alban.medium.com/the-grand-dilemma-e608bca16bbf"
+            target="_blank"
+            rel="noreferrer"
             className="card-link"
           >
             Read Article
@@ -52,6 +53,8 @@ export default function Articles() {
         <div className="card-body footer">
           <a
             href="https://alan-alban.medium.com/deploying-your-express-js-apps-to-aws-in-7-steps-883d51365406"
+            target="_blank"
+            rel="noreferrer"
             className="card-link"
           >
             Read Article
