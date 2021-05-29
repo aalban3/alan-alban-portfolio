@@ -45,14 +45,14 @@ export default function Projects() {
         <div className="project-description">
           <div className="description-text">
             <h2>Jade Finance</h2>
-            <p>
+            <section>
               <p>Grace hopper Motors p1</p>
               <p>Grace hopper Motors p2</p>
               <p className="tech-used">
                 <span>Technologies used:</span> React JS, Redux, Express,
                 PostgreSQL, Sequelize
               </p>
-            </p>
+            </section>
           </div>
           <div className="description-links">
             <LinkButton
@@ -72,7 +72,7 @@ export default function Projects() {
         <div className="project-description">
           <div className="description-text">
             <h2>Social Grapher</h2>
-            <p>
+            <section>
               <p>
                 A social network graph prototype application that uses the
                 GRANDstack. This applications allows users to add tweets, which
@@ -86,7 +86,7 @@ export default function Projects() {
                 <span>Technologies used:</span> GraphQL, React JS, Apollo, Neo4J
                 Database, Typescript.
               </p>
-            </p>
+            </section>
           </div>
           <div className="description-links">
             <LinkButton

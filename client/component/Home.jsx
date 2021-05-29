@@ -7,7 +7,7 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import options from "../particle-options";
 import Articles from "./Articles";
-
+import Contact from "./Contact";
 export default function Home() {
   return (
     <div className="home-container">
@@ -20,6 +20,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Articles />
+      <Contact />
     </div>
   );
 }
