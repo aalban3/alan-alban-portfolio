@@ -8,34 +8,40 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production",
+    "build": "webpack --mode production",
     "build:dev": "npm run build -- --watch --mode=development",
-    "start:dev": "npm run build:dev & nodemon server",
-    "start": "npm run build & node server"
+    "start": "webpack serve --mode production",
+    "start:dev": "npm run build:dev & webpack serve --mode development",
+    "deploy": "aws s3 sync dist/ s3://alan-alban.com"
   },
   "author": "Alan Alban",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13",
+    "@iconify-icons/logos": "^1.1.9",
+    "@iconify/react": "^1.1.4",
     "@material-ui/core": "^4.11.4",
-    "dotenv": "^8.2.0",
+    "@material-ui/icons": "^4.11.2",
+    "babel-loader": "^8.2.2",
+    "clsx": "^1.1.1",
     "ejs": "^3.1.3",
-    "express": "^4.17.1",
-    "mongoose": "^5.10.7",
-    "morgan": "^1.10.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-ionicons": "^4.2.0",
     "react-particles-js": "^3.4.1",
     "react-router-dom": "^5.2.0",
     "react-scroll": "^1.8.2",
     "react-tsparticles": "^1.26.4",
-    "@babel/preset-react": "^7.13.13",
-    "babel-loader": "^8.2.2",
+    "smoothscroll-polyfill": "^0.4.4",
     "webpack": "^5.36.2",
-    "@babel/core": "^7.14.0",
-    "@babel/preset-env": "^7.14.1",
     "webpack-cli": "^4.6.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "nodemon": "^2.0.7",
+    "webpack-dev-server": "^3.11.2"
   }
 }

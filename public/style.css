@@ -1,0 +1,580 @@
+/* MAIN CSS */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+.particles {
+  width: 100vw;
+  background-color: rgba(64, 1, 80, 0.5);
+}
+
+a:hover {
+  color: rgba(209, 209, 209, 0.623) !important;
+  text-decoration: double !important;
+}
+
+.intro-container #tsparticles {
+  height: 100vh !important ;
+}
+.home {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: "center";
+  justify-content: center;
+  pointer-events: none;
+}
+.main-see-more p {
+  position: absolute;
+  color: white;
+  left: 50%;
+  bottom: 10px;
+}
+.home button {
+  margin: 1.2rem;
+  width: 15rem;
+}
+.home a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.intro-container {
+  height: 100vh;
+  position: relative;
+}
+.home-title {
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  pointer-events: all;
+  height: 20rem;
+}
+/* HOME ANIMATION */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(-2000%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.home-title > h1 {
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-in 0s 1 slideInFromLeft;
+}
+.home-title button {
+  margin-top: 3rem;
+}
+.home-title h1 {
+  font-size: 5rem;
+  color: aliceblue;
+}
+
+.element {
+  height: 1000px;
+  background-color: #ededed;
+  font-size: 45px;
+  border-top: 1px solid #000;
+  padding-top: 55px;
+  padding-left: 10px;
+}
+
+.element.no-padding {
+  padding-top: 0;
+}
+
+/*****************/
+/*  NAV SECTION  */
+/*****************/
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  z-index: 1;
+  border-radius: 80px;
+}
+
+.nav-logo {
+  height: 35px;
+  width: 35px;
+}
+
+.nav-logo:hover {
+  cursor: pointer;
+}
+
+.nav-content {
+  width: 100%;
+  padding: 0rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  z-index: 1;
+}
+.nav-item {
+  display: inline;
+  margin-left: 6rem;
+  font-size: 2.1rem;
+}
+.nav-items {
+  margin-right: 7rem;
+}
+.nav-item > a {
+  color: aliceblue;
+}
+.nav-item:hover {
+  color: rgb(143, 143, 143);
+  cursor: pointer;
+}
+
+.section-dark {
+  background: #333;
+  color: white;
+}
+
+.section-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/*******************/
+/*  ABOUT SECTION  */
+/*******************/
+
+.about {
+  background-color: #ededed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about button {
+  margin: 1.2rem;
+  width: 15rem;
+}
+.about a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 70%;
+  height: 50%;
+}
+
+.about-image > img {
+  width: 300px;
+}
+
+.about-image {
+  width: 300px;
+  height: 450px;
+  box-shadow: 6px 6px 10px rgb(98, 98, 98);
+}
+
+.about-description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: 1rem;
+}
+
+.about-description button {
+  margin-top: 2.1rem;
+}
+
+.about-description a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+/*******************/
+/*    PROJECTS     */
+/*******************/
+
+.projects {
+  margin-bottom: 0.01rem;
+}
+.projects {
+  width: 100%;
+}
+.project-description {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem;
+}
+.project-description h2 {
+  margin-bottom: 3rem;
+}
+.projects img {
+  width: 75rem;
+}
+
+#los-santos {
+  display: flex;
+  width: 100%;
+}
+#los-santos .project-description {
+  background-color: rgb(12, 11, 44);
+}
+#jade {
+  width: 100%;
+  display: flex;
+}
+
+#jade .project-description {
+  background-color: rgb(18, 16, 68);
+}
+
+#neo-graph {
+  width: 100%;
+  display: flex;
+}
+
+#neo-graph .project-description {
+  background-color: rgb(32, 31, 83);
+}
+
+.description-text {
+  color: rgb(255, 255, 255);
+}
+
+.tech-used {
+  margin-top: 3rem;
+}
+.tech-used span {
+  font-weight: bold;
+  color: rgb(245, 228, 78);
+}
+
+.description-links {
+  margin-left: 55%;
+  margin-top: 3rem;
+}
+
+.project-description a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.project-description button {
+  margin: 1.2rem;
+  width: 15rem;
+}
+
+/*******************/
+/*     SKILLS      */
+/*******************/
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(38, 38, 70);
+  padding-bottom: 3rem;
+}
+.skills h2 {
+  color: aliceblue;
+  text-decoration: solid;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+#tech-icons {
+  background-color: rgba(216, 216, 216, 0.897);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  height: 60%;
+  border-radius: 10px;
+  box-shadow: 7px 7px 6px rgb(52, 52, 54);
+}
+
+#tech-icons section {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#tech-icons section header {
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  color: rgb(23, 23, 51);
+}
+
+/*******************/
+/*     ARTICLES    */
+/*******************/
+#articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.article-container {
+  width: 50%;
+  height: 40rem;
+  margin: 5rem;
+}
+
+@media screen and (max-width: 1300px) {
+  #los-santos {
+    flex-direction: column;
+    align-items: center;
+  }
+  #jade {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #neo-graph {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #los-santos {
+    flex-direction: column;
+    align-items: center;
+  }
+  #jade {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #neo-graph {
+    flex-direction: column;
+    align-items: center;
+  }
+  #tech-icons {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #los-santos {
+    flex-direction: column;
+    align-items: center;
+  }
+  #jade {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #neo-graph {
+    flex-direction: column;
+    align-items: center;
+  }
+  #tech-icons {
+    width: 80%;
+  }
+  .about-container {
+    flex-direction: column-reverse;
+  }
+  .about-description {
+    width: 90%;
+    margin-top: 2rem;
+  }
+  .about-image {
+    margin-top: 2rem;
+    align-self: center;
+  }
+
+  .nav-items {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #los-santos {
+    flex-direction: column;
+    align-items: center;
+  }
+  #jade {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #neo-graph {
+    flex-direction: column;
+    align-items: center;
+  }
+  #tech-icons {
+    width: 80%;
+  }
+  .about-container {
+    flex-direction: column-reverse;
+  }
+  .about-description {
+    width: 90%;
+    margin-top: 2rem;
+  }
+  .about-image {
+    margin-top: 2rem;
+    align-self: center;
+  }
+
+  .nav-items {
+    display: none;
+  }
+  .description-links {
+    margin-left: 5rem;
+  }
+  .projects img {
+    width: 60rem;
+  }
+  .home-title h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #los-santos {
+    flex-direction: column;
+    align-items: center;
+  }
+  #jade {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #neo-graph {
+    flex-direction: column;
+    align-items: center;
+  }
+  #tech-icons {
+    width: 90%;
+  }
+  .about-container {
+    flex-direction: column-reverse;
+  }
+  .about-description {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .about-image {
+    margin-top: 2rem;
+    align-self: center;
+    width: 200px;
+    height: 300px;
+  }
+  .nav-items {
+    display: none;
+  }
+  .description-links {
+    margin-left: 5rem;
+  }
+  .projects img {
+    width: 47rem;
+  }
+  .home-title h1 {
+    font-size: 3rem;
+  }
+  .about-description p {
+    font-size: 1.2rem;
+  }
+  .description-text {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .description-text section {
+    width: 100%;
+  }
+  .project-description {
+    width: 100%;
+  }
+  .project-description button {
+    margin: 1rem;
+    width: 12rem;
+  }
+  .project-description {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #los-santos {
+    flex-direction: column;
+    align-items: center;
+  }
+  #jade {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #neo-graph {
+    flex-direction: column;
+    align-items: center;
+  }
+  #tech-icons {
+    width: 90%;
+  }
+  .about-container {
+    flex-direction: column-reverse;
+  }
+  .about-description {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .about-image {
+    margin-top: 2rem;
+    align-self: center;
+    width: 200px;
+    height: 300px;
+  }
+  .nav-items {
+    display: none;
+  }
+  .description-links {
+    margin-left: 3rem;
+  }
+  .projects img {
+    width: 40rem;
+  }
+  .home-title h1 {
+    font-size: 3rem;
+  }
+  .about-description p {
+    font-size: 1.2rem;
+  }
+  .description-text {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .description-text section {
+    width: 130%;
+  }
+  .description-text section p {
+    font-size: 1rem;
+  }
+  .project-description {
+    width: 100%;
+  }
+  .project-description button {
+    margin: 1rem;
+    width: 12rem;
+  }
+  .project-description {
+    width: 100%;
+  }
+}

@@ -4,7 +4,7 @@ const options = {
       value: "#000024",
     },
   },
-  fpsLimit: 60,
+  fpsLimit: 30,
   interactivity: {
     detectsOn: "canvas",
     events: {
@@ -26,10 +26,10 @@ const options = {
         size: 40,
       },
       push: {
-        quantity: 4,
+        quantity: 2,
       },
       repulse: {
-        distance: 200,
+        distance: 100,
         duration: 0.4,
       },
     },
@@ -59,9 +59,9 @@ const options = {
     number: {
       density: {
         enable: true,
-        value_area: 1000,
+        value_area: 800,
       },
-      value: 80,
+      value: 150,
     },
     opacity: {
       value: 0.5,

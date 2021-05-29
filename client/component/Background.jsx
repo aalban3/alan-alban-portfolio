@@ -1,8 +1,7 @@
 import React from "react";
 import Particles from "react-particles-js";
-import options from "../particle-options";
 
-const Background = () => {
+const Background = ({ options }) => {
   return (
     <div className="particles">
       <Particles id="tsparticles" params={options} />
