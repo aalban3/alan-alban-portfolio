@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import reduxIcon from "@iconify-icons/logos/redux";
 import graphqlIcon from "@iconify-icons/logos/graphql";
 import reactIcon from "@iconify-icons/logos/react";

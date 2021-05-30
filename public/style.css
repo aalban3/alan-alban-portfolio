@@ -49,7 +49,8 @@ a:hover {
   position: relative;
 }
 .home-title {
-  width: 70rem;
+  background: transparent;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +72,9 @@ a:hover {
   /* This section calls the slideInFromLeft animation we defined above */
   animation: 1s ease-in 0s 1 slideInFromLeft;
   font-family: "Press Start 2P" !important;
-  font-size: 30px !important;
+  width: 100%;
+  font-size: x-large !important;
+  text-align: center;
 }
 .home-title button {
   margin-top: 3rem;
@@ -124,33 +127,40 @@ a:hover {
   height: 100%;
   z-index: 1;
 }
-.nav-item {
-  display: inline;
-  margin-left: 6rem;
-  font-size: 2.1rem;
-}
-.nav-items {
-  margin-right: 7rem;
-}
-.nav-item > a {
-  color: aliceblue !important;
-}
-.nav-item:hover {
-  color: rgb(143, 143, 143);
-  cursor: pointer;
-}
 
 .section-dark {
   background: #333;
   color: white !important;
 }
-
 .section-content {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px;
 }
 
+.nav-menu {
+  margin-right: 2rem;
+}
+
+.menu-icon {
+  transform: scale(3);
+  color: aliceblue;
+}
+.menu-button:focus {
+  outline: 0;
+}
+.menu-list {
+  color: rgb(41, 41, 73);
+  font-size: 18px !important;
+  margin-bottom: 5rem !important;
+}
+.section-icon {
+  color: rgb(41, 41, 73);
+  font-size: 3rem !important;
+}
+.drawer-item {
+  margin-bottom: 2rem !important;
+}
 /*******************/
 /*  ABOUT SECTION  */
 /*******************/
@@ -442,6 +452,12 @@ a:hover {
 }
 
 @media screen and (max-width: 1150px) {
+  .home-title {
+    width: 40%;
+  }
+  .home-title > h1 {
+    font-size: large !important;
+  }
   .projects img {
     width: 100%;
   }
@@ -498,6 +514,12 @@ a:hover {
 }
 
 @media screen and (max-width: 750px) {
+  .home-title {
+    width: 65%;
+  }
+  .home-title > h1 {
+    font-size: large !important;
+  }
   #los-santos {
     flex-direction: column;
     align-items: center;
@@ -546,6 +568,12 @@ a:hover {
   }
 }
 @media screen and (max-width: 500px) {
+  .home-title {
+    width: 50%;
+  }
+  .home-title > h1 {
+    font-size: medium !important;
+  }
   #los-santos {
     flex-direction: column;
     align-items: center;
@@ -614,6 +642,12 @@ a:hover {
   }
 }
 @media screen and (max-width: 380px) {
+  .home-title {
+    width: 60%;
+  }
+  .home-title > h1 {
+    font-size: medium !important;
+  }
   #los-santos {
     flex-direction: column;
     align-items: center;
