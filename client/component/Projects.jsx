@@ -35,7 +35,7 @@ export default function Projects() {
               label="Github"
             />
             <LinkButton
-              source="http://grace-hopper-motors.herokuapp.com/"
+              source="http://gh-motors.herokuapp.com/"
               label="Website"
             />
           </div>
