@@ -33,7 +33,7 @@ export default function About() {
         </div>
         <img
           className="about-image"
-          src="https://aa-portfolio-static.s3.us-east-1.amazonaws.com/aa_pro_shot.png"
+          src="https://aa-portfolio-static.s3.amazonaws.com/aa_pro_shot.png"
         />
       </div>
     </div>
