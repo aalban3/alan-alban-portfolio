@@ -73,6 +73,10 @@ export default function Projects() {
               source="https://www.youtube.com/watch?v=M4-Rp0c6zBU&list=PLx0iOsdUOUmnPA9l9RyeENObqv4SJi-_S&index=3&t=9s"
               label="Demo"
             />
+            <LinkButton
+              source="https://apps.apple.com/us/app/jade-finance/id1569383645"
+              label="image"
+            ></LinkButton>
           </div>
         </div>
         <img src="https://drive.google.com/uc?export=view&id=1qpp9PGn7bdDzckFkBExXlkWtocDYCyN0" />
