@@ -27,7 +27,7 @@ export default function About() {
             </p>
           </section>
           <LinkButton
-            source="https://drive.google.com/file/d/1LzvQpRysHXOlLvtjsKYMqk_Kg-myghU6/view"
+            source="https://drive.google.com/file/d/1wjr4lA_lbWmCuKhXEH2J8Qn4gy1OViMA/view"
             label="My Resume"
           />
         </div>

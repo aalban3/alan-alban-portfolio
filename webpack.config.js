@@ -1,7 +1,11 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require("path");
 module.exports = {
-  entry: ["./client/index.jsx"],
+  output: {
+    path: path.resolve(__dirname, "./dist"),
+    filename: "bundle.js",
+  },
+  entry: "./client/index.jsx",
   resolve: {
     extensions: [".js", ".jsx"],
   },
@@ -10,10 +14,6 @@ module.exports = {
     compress: true,
     port: 8000,
   },
-  // externals: {
-  //   react: "commonjs react",
-  //   "react-dom": "commonjs react-dom",
-  // },
   performance: { hints: false },
   module: {
     rules: [
@@ -40,7 +40,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: "./public/index.html",
-      filename: "./index.html",
+      publicPath: "/",
     }),
   ],
 };
