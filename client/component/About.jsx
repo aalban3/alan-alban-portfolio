@@ -14,16 +14,13 @@ export default function About() {
               young boy in Ecuador. After many years in other areas of the
               software industry, I decided to pursue my passion for Software
               Development and enrolled in a full-time immersive program at
-              FullStack Academy.
+              FullStack Academy in 2021.
             </p>
             <p>
-              In addition to my bootcamp experience, I have three years of
-              experience working in an agile developer team, building and
-              deploying applications. I also have about four years of experience
-              as a Sales Engineer working in the fields of Automation, Cloud and
-              SAAS. I&apos;m looking to leverage my industry experience, my
-              engineering background and my love for coding to solve problems in
-              a new way now, as a full-stack software developer.
+              Since then, I have worked as a full-stack developer at Strategic Financial Solutions, 
+              building cutting edge financial tools using React and .NET Core. 
+              I also have three years of experience working in an agile developer team, building and
+              deploying applications in the financial sector.
             </p>
           </section>
           <LinkButton
