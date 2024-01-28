@@ -3,7 +3,7 @@ import React from "react";
 export default function Contact() {
   return (
     <div id="contact">
-      <p>2021 Alan Alban</p>
+      <p>{new Date().getFullYear()} Alan Alban</p>
       <section className="contact-links">
         <a
           href="https://www.facebook.com/aalban3"

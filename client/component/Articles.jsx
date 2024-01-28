@@ -9,7 +9,7 @@ export default function Articles() {
       <div className="card">
         <img
           className="card-img-top"
-          src="https://drive.google.com/uc?export=view&id=18CVRd-X7x-3s0dJmpYkJR2i9TmJ6oFt5"
+          src="https://aa-portfolio-static.s3.amazonaws.com/grand-stack-logo.png"
           alt="Card image cap"
         />
         <div className="card-body">
@@ -35,7 +35,7 @@ export default function Articles() {
       <div className="card">
         <img
           className="card-img-top"
-          src="https://drive.google.com/uc?export=view&id=1dYu7HB-woeHrLAcFi8ihp1GmfAym4N4g"
+          src="https://aa-portfolio-static.s3.amazonaws.com/aws-tutorial.png"
           alt="Card image cap"
         />
         <div className="card-body">

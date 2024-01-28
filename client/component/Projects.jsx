@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <div className="projects">
       <div id="los-santos">
-        <img src="https://drive.google.com/uc?export=view&id=1iIg4_y0iWPgwupFmnIIcjmsHuJ_mufdL" />
+        <img src="https://aa-portfolio-static.s3.amazonaws.com/los-santos.png" />
         <div className="project-description">
           <div className="description-text">
             <h2>Grace Hopper Motors</h2>
@@ -79,10 +79,10 @@ export default function Projects() {
             ></LinkButton>
           </div>
         </div>
-        <img src="https://drive.google.com/uc?export=view&id=1qpp9PGn7bdDzckFkBExXlkWtocDYCyN0" />
+        <img src="https://aa-portfolio-static.s3.amazonaws.com/jade-finance.png" />
       </div>
       <div id="neo-graph">
-        <img src="https://drive.google.com/uc?export=view&id=1CjiBGDdGIjDgJSHf53M5YYjArZRDD9Dx" />
+        <img src="https://aa-portfolio-static.s3.amazonaws.com/social-grapher.jpg" />
         <div className="project-description">
           <div className="description-text">
             <h2>Social Grapher</h2>
