@@ -4,9 +4,15 @@ Welcome to my page! This website contains my projects, as well as some other inf
 
 ## Tech Stack
 
-May 2021, changing my app to use React now. The tech stack has been updated.
+- React + React Router, bundled with webpack
+- Hosted on S3 + CloudFront at [alanalban.com](https://alanalban.com), DNS on Route 53
+- Deployed by GitHub Actions on push to `dev`, using OIDC (no stored AWS keys)
 
-- Node
-- Express
-- React
-- AWS S3 + AWS Route 53
+See [infra/README.md](infra/README.md) for the AWS resources.
+
+## Local development
+
+```sh
+npm install
+npm start   # http://localhost:8000
+```
