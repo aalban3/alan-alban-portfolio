@@ -1,36 +1,51 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Header from "./Header";
-import { EMAIL, GITHUB_URL, LINKEDIN_URL, work, timeline, projects, articles } from "../data";
+import { EMAIL, GITHUB_URL, LINKEDIN_URL, RESUME_URL, work, timeline, projects, articles } from "../data";
 import headshot from "../assets/alan.jpg";
+import ArchitectureDiagram from "./ArchitectureDiagram";
+import dashdoc from "../caseStudies/dashdoc";
 
-const WorkCard = ({ w }) => {
-  const body = (
-    <>
-      <div className="work-card__meta">
-        <span className="accent-orange">{w.company}</span>
-        <span className="muted">{w.years}</span>
-      </div>
-      <div className="work-card__title">{w.title}</div>
-      <div className="work-card__desc">{w.desc}</div>
-      <div className="chips">
-        {w.stack.map((s) => (
-          <span key={s} className="chip">
-            {s}
-          </span>
-        ))}
-      </div>
-      {w.caseStudy && <span className="work-card__cta">Read the case study →</span>}
-    </>
-  );
-  return w.caseStudy ? (
-    <Link to={w.caseStudy} className="card work-card work-card--link">
-      {body}
-    </Link>
-  ) : (
-    <div className="card work-card">{body}</div>
-  );
-};
+const featured = work.find((w) => w.caseStudy);
+const rest = work.filter((w) => w !== featured);
+
+// Off-site links open in a new tab.
+const external = { target: "_blank", rel: "noopener noreferrer" };
+
+const WorkBody = ({ w }) => (
+  <>
+    <div className="work-card__meta">
+      <span className="accent-orange">{w.role ? `${w.company} · ${w.role}` : w.company}</span>
+      <span className="muted">{w.years}</span>
+    </div>
+    <div className="work-card__title">{w.title}</div>
+    <div className="work-card__desc">{w.desc}</div>
+    <div className="chips">
+      {w.stack.map((s) => (
+        <span key={s} className="chip">
+          {s}
+        </span>
+      ))}
+    </div>
+    {w.caseStudy && <span className="work-card__cta">Read the case study →</span>}
+  </>
+);
+
+// The job with a case study gets a full-width card with a live preview of its diagram.
+const FeaturedWork = ({ w }) => (
+  <Link to={w.caseStudy} className="card work-card work-card--link work-card--featured">
+    <ArchitectureDiagram study={dashdoc} preview />
+    <div className="work-card__body">
+      <WorkBody w={w} />
+    </div>
+  </Link>
+);
+
+const WorkCard = ({ w }) => (
+  <div className="card work-card">
+    <WorkBody w={w} />
+  </div>
+);
 
 const Portfolio = () => {
   const { hash } = useLocation();
@@ -71,8 +86,8 @@ const Portfolio = () => {
               <a href="#work" className="btn btn--light">
                 View Work
               </a>
-              <a href={LINKEDIN_URL} className="btn btn--outline">
-                LinkedIn ↗
+              <a href={RESUME_URL} className="btn btn--outline" {...external}>
+                Résumé ↗
               </a>
             </div>
           </div>
@@ -88,10 +103,11 @@ const Portfolio = () => {
         <section id="work" className="section">
           <div className="section__head">
             <h2 className="h2">Selected work</h2>
-            <span className="muted">Professional, 2016 to now</span>
+            <span className="muted">Professional, 2014 to now</span>
           </div>
+          <FeaturedWork w={featured} />
           <div className="work-grid">
-            {work.map((w) => (
+            {rest.map((w) => (
               <WorkCard key={w.company} w={w} />
             ))}
           </div>
@@ -117,7 +133,7 @@ const Portfolio = () => {
               <div key={p.name} className="list-item">
                 <div className="list-item__head">
                   <span className="list-item__title">{p.name}</span>
-                  <a href={p.gh} className="small-link">
+                  <a href={p.gh} className="small-link" {...external}>
                     GitHub ↗
                   </a>
                 </div>
@@ -128,7 +144,7 @@ const Portfolio = () => {
           <div id="writing" className="list-col">
             <h2 className="h3">Writing</h2>
             {articles.map((a) => (
-              <a key={a.url} href={a.url} className="list-item list-item--link">
+              <a key={a.url} href={a.url} className="list-item list-item--link" {...external}>
                 <span className="list-item__title">{a.title}</span>
                 <span className="list-item__desc">{a.sub} · Medium ↗</span>
               </a>
@@ -148,8 +164,15 @@ const Portfolio = () => {
               </a>
             </div>
             <div className="site-footer__links">
-              <a href={GITHUB_URL}>GitHub ↗</a>
-              <a href={LINKEDIN_URL}>LinkedIn ↗</a>
+              <a href={GITHUB_URL} {...external}>
+                GitHub ↗
+              </a>
+              <a href={LINKEDIN_URL} {...external}>
+                LinkedIn ↗
+              </a>
+              <a href={RESUME_URL} {...external}>
+                Résumé ↗
+              </a>
             </div>
           </div>
           <div className="site-footer__bottom">

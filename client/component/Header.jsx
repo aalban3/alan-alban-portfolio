@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { EMAIL } from "../data";
+import { LINKEDIN_URL } from "../data";
 
 // The home page shows section links; subpages show a link back to the work grid.
 const Header = ({ home }) => {
@@ -18,7 +18,7 @@ const Header = ({ home }) => {
               <a href="#projects">Projects</a>
               <a href="#writing">Writing</a>
             </nav>
-            <a href={`mailto:${EMAIL}`} className="btn btn--primary">
+            <a href={LINKEDIN_URL} className="btn btn--primary" target="_blank" rel="noopener noreferrer">
               Get in Touch
             </a>
           </>

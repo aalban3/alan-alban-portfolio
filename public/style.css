@@ -56,7 +56,7 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -280,8 +280,33 @@ img {
 /* Work */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 20px;
+}
+/* Chained with .work-card so it wins over that rule's display: flex. */
+.work-card.work-card--featured {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 36px;
+  align-items: center;
+}
+.work-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.work-card--featured .work-card__title {
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+.work-card--featured .work-card__desc {
+  font-size: 16px;
+}
+.arch-frame--preview {
+  padding: 14px;
+  border-radius: 10px;
+  pointer-events: none;
 }
 .work-card {
   padding: 28px;
@@ -547,18 +572,25 @@ img {
 }
 .cs-arch {
   padding: 80px 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
-  gap: 56px;
-  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+.cs-steps-col {
+  flex: 1 1 280px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .cs-steps {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.cs-steps .eyebrow {
-  margin-bottom: 8px;
+.cs-step-body--mobile {
+  display: none;
 }
 .cs-step {
   all: unset;
@@ -605,84 +637,292 @@ img {
   text-wrap: pretty;
 }
 .cs-diagram {
+  flex: 1 1 640px;
+  max-width: 800px;
+  min-width: 0;
   position: sticky;
   top: 96px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.cs-diagram__frame {
-  padding: 20px;
+
+/* AWS-style architecture diagram */
+.msym {
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
 }
-.cs-diagram__note {
+.arch-frame {
+  min-width: 0;
+  background-color: #06121f;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 20px 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px 20px 20px;
+  overflow: hidden;
+}
+.arch-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.arch-scroll::-webkit-scrollbar {
+  display: none;
+}
+.arch-pan-hint {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--text-50);
+  text-align: center;
+}
+.arch-canvas {
+  position: relative;
+  margin: 0 auto;
+  transform-origin: top left;
+}
+.arch-group {
+  position: absolute;
+  border-radius: 8px;
+}
+.arch-group--cloud {
+  border: 1px solid rgba(255, 153, 0, 0.45);
+  border-radius: 10px;
+  background: rgba(255, 153, 0, 0.03);
+}
+.arch-group--vpc {
+  border: 1px dashed rgba(140, 79, 255, 0.6);
+}
+.arch-group--public {
+  border: 1px solid rgba(122, 161, 22, 0.35);
+  border-radius: 6px;
+  background: rgba(122, 161, 22, 0.04);
+}
+.arch-group--compute {
+  border: 1px solid rgba(237, 113, 0, 0.35);
+  border-radius: 6px;
+  background: rgba(237, 113, 0, 0.04);
+}
+.arch-group--data {
+  border: 1px solid rgba(201, 37, 209, 0.3);
+  border-radius: 6px;
+  background: rgba(201, 37, 209, 0.03);
+}
+.arch-group__label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.arch-group__label--tl {
+  left: 0;
+  top: 0;
+}
+.arch-group__label--tr {
+  right: 8px;
+  top: 3px;
+}
+.arch-group__label--bl {
+  left: 8px;
+  bottom: 5px;
+}
+.arch-group--cloud > .arch-group__label {
+  padding: 5px 10px;
+  background: #ff9900;
+  border-radius: 10px 0 8px 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--bg);
+}
+.arch-group--cloud .msym {
+  font-size: 15px;
+}
+.arch-group--vpc > .arch-group__label {
+  padding: 3px 8px;
+  background: rgba(140, 79, 255, 0.18);
+  border-radius: 8px 0 6px 0;
+  font-weight: 700;
+  color: #b794ff;
+}
+.arch-group--public > .arch-group__label {
+  color: #a8cc4a;
+}
+.arch-group--compute > .arch-group__label {
+  color: #f39b4a;
+}
+.arch-group--data > .arch-group__label {
+  color: #e07be6;
+}
+.arch-group__label--free {
+  color: #3dd6b5;
+}
+.arch-wires {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+.arch-wire {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.14);
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+  transition: stroke 0.25s;
+}
+.arch-wire.is-on {
+  stroke: var(--blue);
+  stroke-width: 1.75;
+  stroke-dasharray: none;
+}
+/* Telemetry is a side channel, so it stays dotted and orange when lit. */
+.arch-wire--telemetry.is-on {
+  stroke: #f46800;
+  stroke-dasharray: 2 4;
+  stroke-linecap: round;
+}
+.arch-arrow--on {
+  fill: var(--link);
+}
+.arch-arrow--tel {
+  fill: #f46800;
+}
+.arch-arrow--off {
+  fill: rgba(255, 255, 255, 0.2);
+}
+.arch-packet__glow {
+  fill: var(--link);
+  opacity: 0.6;
+}
+.arch-packet__core {
+  fill: #e6f2ff;
+}
+.arch-packet--tel .arch-packet__glow {
+  fill: #f46800;
+}
+.arch-packet--tel .arch-packet__core {
+  fill: #ffe0cc;
+}
+.arch-node {
+  all: unset;
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0a1622;
+  opacity: 0.45;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.arch-node.is-on {
+  opacity: 1;
+  background: var(--surface-active);
+  border-color: rgba(77, 166, 255, 0.8);
+  box-shadow: 0 0 20px rgba(0, 128, 255, 0.25);
+}
+.arch-node.is-picked {
+  opacity: 1;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(255, 128, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.arch-node:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+.arch-node__icon {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 17px;
+}
+.arch-node__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.arch-node__label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.15;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.arch-node__svc {
+  font-size: 10px;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: var(--text-60);
+}
+.arch-detail {
   border-radius: 12px;
   padding: 16px 18px;
   display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  min-height: 72px;
+}
+.arch-detail__icon {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+}
+.arch-detail__text {
+  display: flex;
   flex-direction: column;
   gap: 4px;
-  min-height: 64px;
+  min-width: 0;
   font-size: 14px;
   line-height: 1.55;
   color: var(--text-75);
 }
-.cs-diagram__note-title {
-  font-size: 13px;
+.arch-detail__head {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.arch-detail__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+.arch-detail__svc {
+  font-size: 12px;
   font-weight: 600;
+  color: var(--orange);
 }
-
-/* Diagram (SVG, scales with its container) */
-.diagram {
-  display: block;
-  width: 100%;
-  max-width: 540px;
-  height: auto;
-  margin: 0 auto;
-  font-family: var(--font-body);
-}
-.diagram__edge {
-  stroke: rgba(255, 255, 255, 0.12);
-  stroke-width: 1;
-  stroke-dasharray: 4 4;
-  transition: stroke 0.2s;
-}
-.diagram__edge--on {
-  stroke: var(--blue);
-  stroke-width: 2;
-  stroke-dasharray: none;
-}
-.diagram__node {
-  cursor: pointer;
-  outline: none;
-}
-.diagram__node rect {
-  fill: var(--bg);
-  stroke: rgba(255, 255, 255, 0.1);
-  transition: fill 0.2s, stroke 0.2s;
-}
-.diagram__label {
-  font-size: 13px;
-  font-weight: 600;
-  fill: rgba(246, 248, 250, 0.4);
-}
-.diagram__tech {
-  font-size: 11px;
-  fill: rgba(246, 248, 250, 0.3);
-}
-.diagram__node.is-active rect {
-  fill: var(--surface-active);
-  stroke: rgba(0, 128, 255, 0.7);
-}
-.diagram__node.is-active .diagram__label,
-.diagram__node.is-selected .diagram__label {
-  fill: var(--text);
-}
-.diagram__node.is-active .diagram__tech,
-.diagram__node.is-selected .diagram__tech {
-  fill: var(--text-60);
-}
-.diagram__node.is-selected rect,
-.diagram__node:focus-visible rect {
-  stroke: var(--orange);
+.arch-detail__links {
+  font-size: 12px;
+  color: var(--text-50);
 }
 
 .cs-decisions {
@@ -694,7 +934,7 @@ img {
 }
 .cs-decisions__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
   gap: 20px;
 }
 .decision {
@@ -736,10 +976,92 @@ img {
   color: var(--text);
 }
 
+/* Diagram wraps below the steps: steps become a swipeable tab row right above it. */
+@media (max-width: 980px) {
+  .cs-arch {
+    padding: 56px 0;
+    gap: 16px;
+  }
+  .cs-diagram {
+    position: static;
+    max-width: none;
+  }
+  .cs-steps {
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    margin: 0 calc(var(--gutter) * -1);
+    padding: 2px var(--gutter);
+    scroll-padding: 0 var(--gutter);
+    scrollbar-width: none;
+  }
+  .cs-steps::-webkit-scrollbar {
+    display: none;
+  }
+  .cs-step {
+    flex: none;
+    padding: 10px 14px;
+    border-radius: 999px;
+  }
+  .cs-step__title {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .cs-step__body {
+    display: none;
+  }
+  .cs-step-body--mobile {
+    display: block;
+    margin: 0;
+    min-height: 4.95em; /* ~3 lines, so the diagram doesn't jump between steps */
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--text-75);
+  }
+}
+
 /* Small screens */
 @media (max-width: 720px) {
+  html {
+    scroll-padding-top: 108px; /* two-row header */
+  }
+  .site-header__inner {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
   .site-nav {
+    order: 3;
+    width: 100%;
+    gap: 22px;
+    font-size: 13px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .site-nav::-webkit-scrollbar {
     display: none;
+  }
+  .hero {
+    padding-bottom: 56px;
+  }
+  .section {
+    padding: 44px 0;
+    gap: 24px;
+  }
+  .work-card {
+    padding: 22px;
+  }
+  .work-card.work-card--featured {
+    gap: 22px;
+  }
+  .work-card--featured .work-card__title {
+    font-size: 24px;
+  }
+  .site-footer__inner {
+    padding-top: 48px;
+    gap: 32px;
+  }
+  .cs-hero {
+    padding: 48px 0 36px;
   }
   .hero {
     gap: 48px;
@@ -749,10 +1071,7 @@ img {
     right: 12px;
     bottom: 12px;
   }
-  .cs-diagram {
-    position: static;
-  }
-  .cs-diagram__frame {
+  .arch-frame {
     padding: 12px;
   }
 }

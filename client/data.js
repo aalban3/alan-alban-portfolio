@@ -1,10 +1,13 @@
 export const EMAIL = "alan.alban10@gmail.com";
 export const GITHUB_URL = "https://github.com/aalban3";
 export const LINKEDIN_URL = "https://linkedin.com/in/alan-alban";
+// Live Google Doc (shared as "anyone with the link can view"), so edits show up without a deploy.
+export const RESUME_URL = "https://docs.google.com/document/d/1V-ZF-KuNBS1y2wDS3-0ly2OO78IWw9rkr1iLaz_Br7U/preview";
 
 export const work = [
   {
     company: "Dashdoc",
+    role: "Co-Founder",
     years: "Now",
     title: "An EMR for speech-language pathologists",
     desc: "Co-founded Dashdoc and lead engineering. Clinicians get faster access to patient goals and documents, and AI drafts the routine parts of their notes for review.",
@@ -13,10 +16,10 @@ export const work = [
   },
   {
     company: "Cox Automotive",
-    years: "2024",
-    title: "Moving a national marketplace off a PHP monolith",
-    desc: "Migrated a high-traffic marketplace API to distributed .NET microservices on AWS. Led customer-facing Listings API features and mentored engineers on the team.",
-    stack: [".NET", "AWS", "Microservices", "OpenSearch", "AI"],
+    years: "2024 – Now",
+    title: "Making a high-traffic marketplace faster",
+    desc: "Tuned the Listings and Search services: better SQL query plans, targeted PostgreSQL indexes, less redundant OpenSearch work and simpler BFF logic, for higher throughput and better Apdex scores. Also helped move the platform off a PHP monolith to .NET and React on AWS, and opened listing offers to public marketplaces.",
+    stack: [".NET", "PostgreSQL", "OpenSearch", "AWS", "React"],
   },
   {
     company: "Strategic Financial Solutions",
